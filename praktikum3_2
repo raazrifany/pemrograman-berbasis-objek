@@ -1,0 +1,17 @@
+import javax.swing.*;
+public class praktikum3_2 {
+    public static void main(String args []) {
+    	String kodeBuku;
+    	kodeBuku = JOptionPane.showInputDialog("Masukan Kode Buku");
+    	System.out.println("Kode Buku : " +kodeBuku);
+    	if(kodeBuku.equals("B001")){
+    		System.out.println("Judul Buku: Mengenal Java");
+    	}else if(kodeBuku.equals("B002")){
+    		System.out.println("Judul Buku: Mengenal PHP");
+    	}else{
+    		System.out.println("Kode Tidak Ditemukan");
+    	}
+    }
+    
+    
+}
