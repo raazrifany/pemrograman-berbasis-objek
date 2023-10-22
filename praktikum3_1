@@ -1,0 +1,15 @@
+import javax.swing.*;
+public class praktikum3_1 {
+
+    public static void main(String args []) {
+    	int nilai;
+    	nilai = Integer.valueOf(JOptionPane.showInputDialog("Masukan Nilai"));
+    	if(nilai >= 70){
+    		System.out.println("Nilai " +nilai+ " = Lulus");
+    	}else{
+    		System.out.println("Nilai " +nilai+ " = Gagal");
+    	}
+    }
+    
+    
+}
