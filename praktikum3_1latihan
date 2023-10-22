@@ -1,29 +1,35 @@
 import java.util.Scanner;
-public class praktikum3_1latihan {
-
+public class praktikum3Latihan {
     public static void main(String args []) {
-    	int tugas, quiz, uts, uas; double nilaiAkhir;
-    	Scanner inputNilai = new Scanner(System.in);
-    	System.out.print("Nilai Tugas : "); tugas = inputNilai.nextInt();
-    	System.out.print("Nilai Quiz  : "); quiz = inputNilai.nextInt();
-    	System.out.print("Nilai UTS   : "); uts = inputNilai.nextInt();
-    	System.out.print("Nilai UAS   : "); uas = inputNilai.nextInt();
-    	nilaiAkhir = (tugas * 0.2) + (quiz * 0.1) + (uts * 0.3) + (uas * 0.4);
-    	System.out.println("Nilai Akhir = " +nilaiAkhir);
-    	if(nilaiAkhir <= 100 && nilaiAkhir >= 80){
-    		System.out.println("Index = A");
-    	}else if(nilaiAkhir < 80 && nilaiAkhir >= 68){
-    		System.out.println("Index = B");
-    	}else if(nilaiAkhir < 68 && nilaiAkhir >= 56){
-    		System.out.println("Index = C");
-    	}else if(nilaiAkhir < 56 && nilaiAkhir >= 45){
-    		System.out.println("Index = D");
-    	}else if(nilaiAkhir <45 && nilaiAkhir >= 0){
-    		System.out.println("Index = E");
-    	}else{
-    		System.out.println("Silakan periksa kembali nilai yang di-input");
+    	String nama, jurusan, kelas; int jumlah, harga=0, bayar;
+    		
+    	System.out.println("| Kelas/Jurusan | Bandung | Jakarta |");
+    	System.out.println("|    Bisnis     |  40000  |  60000  |");
+    	System.out.println("|    Ekonomi    |  20000  |  40000  |");
+    	
+    	Scanner inputData = new Scanner(System.in);
+    	System.out.print("Nama Pembeli : "); nama = inputData.nextLine();
+    	System.out.print("Jurusan      : "); jurusan = inputData.nextLine();
+    	System.out.print("Kelas        : "); kelas = inputData.nextLine();
+    	System.out.print("Jumlah Tiket : "); jumlah = inputData.nextInt();
+    	
+    	if (jurusan.equalsIgnoreCase("Bandung")){
+    		if(kelas.equalsIgnoreCase("Bisnis")){
+    			harga = 40000;
+    		}else if(kelas.equalsIgnoreCase("Ekonomi")){
+    			harga = 20000;
+    		}
+    	}else if(jurusan.equalsIgnoreCase("Jakarta")){
+    		if(kelas.equalsIgnoreCase("Bisnis")){
+    			harga = 60000;
+    		}else if(kelas.equalsIgnoreCase("Ekonomi")){
+    			harga = 40000;
+    		}
     	}
+    	
+    	System.out.println("Harga = "+harga);
+    	bayar = harga*jumlah;
+    	System.out.println("Jumlah Bayar = "+bayar);
     }
-    
     
 }
