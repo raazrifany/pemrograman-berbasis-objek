@@ -30,6 +30,9 @@ public static void main(String args[]) {
 	    	}else if(kodeItem[i].equalsIgnoreCase("M003")){
 	    		namaItem[i] = "Modem";
 	    		harga[i] = 300000;
+	    	}else{
+	    		namaItem[i] = "Tidak Ditemukan";
+	    		harga[i] = 0;
 	    	}
 	    	
 	    	total[i] = harga[i]*jumlah[i];
